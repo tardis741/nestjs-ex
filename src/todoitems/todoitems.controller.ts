@@ -54,4 +54,8 @@ export class TodoitemsController {
   }
 
   // INSERT DELETE CODE HERE
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.todoitemsService.remove(id);
+  }
 }
